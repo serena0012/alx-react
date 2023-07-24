@@ -1,26 +1,37 @@
-// task_2/webpack.config.js
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './js/dashboard_main.js',
-  output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
+  mode: "production",
+  entry: {
+    main: path.resolve(__dirname, "./js/dashboard_main.js"),
   },
-  mode: 'production',
+  output: {
+    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js",
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'assets',
-        },
+        test: /\.(gif|png|jp?g|svg)$/i,
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+            options: {
+              bypassOnDebug: true,
+              disable: true,
+            },
+          },
+        ],
       },
     ],
   },
