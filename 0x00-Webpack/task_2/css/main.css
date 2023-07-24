@@ -1,7 +1,12 @@
 #count {
-  display: inline;
   font-weight: bold;
-  margin: 0;
+  float: right;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 #logo {
