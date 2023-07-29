@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,300&display=swap';
+
+
+.App-logo {
+  height: 30vmin;
+
+}
+
+.App-header {
+
+  align-items: top;
+  font-size: 20px;
+  color: #F2003A;
+  display: flex;
+  border-bottom: 3px solid #F2003A;
+  margin-bottom:  50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; 
+}
+
+.App-body {
+  margin:  50px;
+  min-height: 50vh;
+  font-weight: bold;  
+  font-family: 'Poppins', sans-serif;
+  font-size: 20;
+
+
+}
+
+.App-footer {
+  border-top: 3px solid #F2003A;
+  text-align: center;
+  font-style: italic;
+  font-size: 20;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
