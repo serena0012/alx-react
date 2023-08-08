@@ -2,6 +2,8 @@ import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 
 import './Notifications.css';
+
+// eslint-disable-next-line
 import { getLatestNotification } from '../utils/utils';
 import closeIcon from '../assets/Close-icon.png';
 
